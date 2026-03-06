@@ -83,9 +83,8 @@ body {
 }
 
 .card-direito {
-    background-image: url('./image/gatos.jpg');
+    background-image: url('./image/macaco.jpg');
     background-size: cover;
-    background-position: center;
     border-radius: 40px;
     height: 80%;
     width: 50%;
@@ -118,30 +117,142 @@ body {
 .grupo-dicas img {
     width: 50%;
     padding: 50px;
-    border-radius: 20px;
+    border-radius: 100px;
 }
 
 .dicas {
     width: 50%;
     padding: 50px;
 
-
 }
 
 .dicas h1 {
-    font-size: 31px;
+    font-size: 40px;
     font-weight: bold;
+    color: rgb(100, 60, 14);
+
 }
 
 .dicas h2 {
     font-size: 28px;
+    color: #b46b0c;
     font-weight: bold;
-    color: #5C5C5C;
 
 }
 
+.dicas h3 {
+    font-size: 25px;
+    color: brown;
+}
+
+
+
+
+
+
+
 .dicas p {
     font-size: 28px;
-    color: #5C5C5C;
+    color: #1f1807;
 
+}
+
+.rodape {
+    background-color: black;
+    padding: 50px;
+
+
+}
+
+.título {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.campo-email {
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    font-size: 28px;
+    color: white;
+
+}
+
+.campo-email input {
+
+    height: 100%;
+    width: 358px;
+    border-radius: 20px;
+    background-color: transparent;
+    font-size: 24px;
+    color: white;
+    border: 1px solid white;
+    padding-left: 10px;
+}
+
+.campo-email button {
+
+    background-color: #ebc154;
+    width: 230PX;
+    margin-left: 20px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 10px;
+}
+
+.menu-rodape {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-content:center;
+    margin-top: 100px;
+}
+
+.menu-rodape p {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.menu-rodape ul {
+    font-size: 25px;
+    display: flex;
+    list-style-type: none;
+    font-weight: bold;
+
+}
+
+.menu-rodape li {
+    margin-right: 25px;
+
+
+}
+#selecionado{
+    color:#ebc154
+}
+.rodape hr {
+margin-top: -20px;
+
+
+}
+.redes-social{
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 100px;
+}
+
+.item-social {
+width: 50px;
+height: 50px;
+border-radius: 100%;
+background-color: #ebc154 ;
+margin: 10px;
+color: white;
+fill: antiquewhite;
+padding: 8px;
 }
