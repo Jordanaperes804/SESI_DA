@@ -1,0 +1,46 @@
+body {
+    margin: 0px;
+}
+
+.card-login {
+    display: flex;
+}
+
+.login-esquerdo {
+    background-image: url('./image/cachorropug.jpg');
+    background-size: cover;
+    width: 40%;
+    height: 945px;
+    text-align: center;
+    font-size: 50px;
+    font-style: oblique;
+
+
+}
+
+.login-direito {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+.login-direito h1{
+text-align: center;
+font-size: 45px;
+top: 111px;
+left: 561px;
+justify-content: center;
+display: flex;
+
+
+}
+
+.menu img {
+    height: 100%;
+    width: 585px;
+    left: -4px;
+    display: flex;
+}
