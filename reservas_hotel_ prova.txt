@@ -1,0 +1,75 @@
+CREATE DATABASE;
+USE hotel;
+
+Tabela de clientes
+CREATE TABLE clientes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100),
+    telefone VARCHAR(20)
+);
+
+Tabela de quartos
+CREATE TABLE quartos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    numero VARCHAR(20) NOT NULL,
+    capacidade INT,
+    vista_mar BOOLEAN,
+    diaria DECIMAL(10,2)
+);
+
+ Tabela de reservas
+CREATE TABLE reservas (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    cliente_id INT NOT NULL,
+    quarto_id INT NOT NULL,
+    data_entrada DATE,
+    data_saida DATE,
+    cupom VARCHAR(5),
+    FOREIGN KEY (cliente_id) REFERENCES clientes(id),
+    FOREIGN KEY (quarto_id) REFERENCES quartos(id)
+);
+
+
+
+INSERT INTO quartos (numero, capacidade, vista_mar, diaria)
+VALUES ('Quarto 1', 1, FALSE, 150);
+
+INSERT INTO clientes (nome, email, telefone)
+VALUES ('Miguel', 'miguel@teste.com', '469520-3536');
+
+INSERT INTO reservas (cliente_id, quarto_id, data_entrada, data_saida)
+VALUES (1, 1, '2023-05-01', '2023-05-02');
+
+SELECT * FROM quartos
+ORDER BY vista_mar;
+
+SELECT * FROM clientes
+ORDER BY nome, email;
+
+SELECT id, numero, capacidade, diaria FROM quartos
+WHERE capacidade = 2;
+
+SELECT * FROM clientes
+ORDER BY nome;
+
+SELECT * FROM quartos
+ORDER BY diaria DESC;
+
+SELECT * FROM quartos
+ORDER BY diaria ASC;
+
+
+UPDATE reservas
+SET cupom = 'LGTSP'
+WHERE id = 1;
+
+DELETE FROM reservas WHERE id = 4;
+DELETE FROM reservas WHERE id = 3;
+
+
+DROP TABLE reservas;
+DROP TABLE clientes;
+DROP TABLE quartos;
+
+DROP DATABASE hotel;
